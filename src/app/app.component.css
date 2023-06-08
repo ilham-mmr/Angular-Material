@@ -1,0 +1,13 @@
+
+>>> body {
+    margin: 0;
+}
+
+main {
+    margin: 30px;
+}
+
+mat-toolbar a {
+  color: white;
+}
+

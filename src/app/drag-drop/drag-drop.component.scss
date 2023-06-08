@@ -1,0 +1,66 @@
+@import "../../mixins";
+
+@include drag-drop();
+
+.drag-drop-container {
+  font-family: "Roboto";
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  h3 {
+    text-align: center;
+    font-weight: 700;
+  }
+}
+
+.lessons-list {
+  width: 200px;
+  max-width: 100%;
+  border: solid 1px #ccc;
+  min-height: 60px;
+  display: block;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lesson {
+  padding: 20px 10px;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+}
+
+.done,
+.in-progress {
+  margin-left: 30px;
+}
+
+.done {
+  .lesson {
+    background: #477a6d;
+    color: #fff;
+  }
+}
+
+.pending {
+  .lesson {
+    background: #4E6E81;
+    color: #fff;
+  }
+}
+
+.in-progress {
+  .lesson {
+    background: #088395;
+    color: #fff;
+  }
+}
